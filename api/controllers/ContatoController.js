@@ -13,7 +13,7 @@ module.exports = {
 		Recaptcha = require('recaptcha-v2').Recaptcha;
 		var recaptcha = new Recaptcha(process.env.RECAPTCHA_PUBLIC_KEY, process.env.RECAPTCHA_PRIVATE_KEY);
 				
-		return res.view("contato",{title:"Contaddte Me",captcha:recaptcha.toHTML()})
+		return res.view("contato",{title:"Contate Me",captcha:recaptcha.toHTML()})
 	},
 	
 	send: function(req, res) {
@@ -24,8 +24,8 @@ module.exports = {
 		data.fone = req.param("fone");
 		data.email = req.param("email");
 		data.message = req.param("message");
-		success=false;
-		message=null;
+		let success=false;
+		let message=null;
    
 		var data_recapctcha = {
 			remoteip:  req.connection.remoteAddress,
