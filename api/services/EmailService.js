@@ -4,7 +4,7 @@ var opts = {
     
 		host: "br542.hostgator.com.br",
         port: 587,
-        secure: false,
+        secure: true,
         auth: {
             user: "noreply@fm32.com.br",
             pass: "6LB*l4SaR%^X6.ak#*"
