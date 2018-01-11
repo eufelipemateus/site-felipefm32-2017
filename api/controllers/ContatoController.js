@@ -66,10 +66,10 @@ module.exports = {
 				
 				
 				EmailService.sendEmail ({
-						from: "noreply@felipefm32.com.br" ,
+						from: "noreply@fm32.com.br" ,
 						to: data.email ,
 						subject: "Resposta Automatica",
-						html: `Sua menssagem foi enviada aguarde pois em breve estarei respondendo.` ,
+						html: `Sua menssagem foi enviada aguarde pois em breve estarei respondendo.\n\n Atenciosamente, Felipe Mateus` ,
 					  }, function(err, reply) {
 						console.log(err && err.stack);
 						console.dir(reply);
