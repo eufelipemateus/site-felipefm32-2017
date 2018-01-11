@@ -57,7 +57,7 @@ module.exports = {
 						from: data.email,
 						to: "contato@felipefm32.com.br",
 						subject: `Messagem de "${data.name}" `,
-						html: ` Name: ${data.name} \n  Telefone: ${data.fone} \n\n  Messagem: ${data.message}    ` ,
+						text: ` Name: ${data.name} \n  Telefone: ${data.fone} \n\n  Messagem: ${data.message}    ` ,
 					  }, function(err, reply) {
 						console.log(err && err.stack);
 						console.dir(reply);
@@ -69,7 +69,7 @@ module.exports = {
 						from: "noreply@fm32.com.br" ,
 						to: data.email ,
 						subject: "Resposta Automatica",
-						html: `Sua menssagem foi enviada aguarde pois em breve estarei respondendo.\n\n Atenciosamente, Felipe Mateus` ,
+						text: `Sua menssagem foi enviada aguarde pois em breve estarei respondendo.\n\n Atenciosamente, Felipe Mateus` ,
 					  }, function(err, reply) {
 						console.log(err && err.stack);
 						console.dir(reply);
