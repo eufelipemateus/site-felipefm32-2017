@@ -1,94 +1,114 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
   <head>
-    <title><%=typeof title == 'undefined' ? 'New Sails App' : title%></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Eu sou Felipe Mateus, Brasileiro, tenho 21 anos e Programador Freelancer." />
+	<meta name="keywords" content="Freelances,felipe, mateus,fm32, felipefm, sistemas, linked, instagram, contato, facebook, twitter, oficial, desenvolvedor, analista,felipefm32,fm,IT,contato,Informatica,TI,Programador," />
+	<link rel="canonical" href="<%- sails.config.appUrl+req.url %>" />
+	<meta name="author" content="Felipe Mateus" />
+	<meta property="og:locale" content="pt-BR" />
+	<meta property="og:url" content="<%- sails.config.appUrl+req.url %>" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Felipe Mateus" />
+	<meta property="og:site_name" content="Felipe Mateus" />
+	<meta property="og:description" content="Eu sou Felipe Mateus, Brasileiro, tenho 21 anos e Programador Freelancer." />
+	<meta property="og:image" content="<%- sails.config.appUrl+"images/avatar.png" %>" />
+	<meta property="og:image:alt" content="Avatar Felipe Mateus" />
+	<meta property="fb:app_id" content="390966160994721" />
+	<meta name="twitter:title" content="Felipe Mateus" >
+	<meta name="twitter:description" content="Eu sou Felipe Mateus, Brasileiro, tenho 21 anos e Programador Freelancer.')">
+	<meta name="twitter:image" content="<%- sails.config.appUrl+"images/avatar.png" %>">
+	<meta name="twitter:site" content="<%- sails.config.appUrl+req.url %>">
 
-    <!-- Viewport mobile tag for sensible mobile support -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+    <link rel="icon" href="favicon.png">
 
-    <!--
-        Stylesheets and Preprocessors
-        ==============================
+    <title><%- title %> - Felipe Mateus</title>
 
-        You can always bring in CSS files manually with `<link>` tags, or asynchronously
-        using a solution like AMD (RequireJS).  Or, if you like, you can take advantage
-        of Sails' conventional asset pipeline (boilerplate Gruntfile).
+    <!-- Custom styles for this template -->
+	<link href="styles/importer.css"  rel="stylesheet">
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-71281240-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
 
-        By default, stylesheets from your `assets/styles` folder are included
-        here automatically (between STYLES and STYLES END). Both CSS (.css) and LESS (.less)
-        are supported. In production, your styles will be minified and concatenated into
-        a single file.
-
-        To customize any part of the built-in behavior, just edit `tasks/pipeline.js`.
-        For example, here are a few things you could do:
-
-            + Change the order of your CSS files
-            + Import stylesheets from other directories
-            + Use a different or additional preprocessor, like SASS, SCSS or Stylus
-    -->
-
-    <!--STYLES-->
-    <link rel="stylesheet" href="/styles/importer.css">
-    <!--STYLES END-->
+	  gtag('config', 'UA-71281240-1');
+	</script>
+	<!-- Data   -->
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "WebSite",
+  "name": "Felipe Mateus",
+  "alternateName": "@felipefm32",
+  "url": "https://felipefm32.com"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Person",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Duque de Caxias",
+    "addressRegion": "RJ",
+    "postalCode": "25260000",
+    "streetAddress": "Av. Automovel Clube, Santa Cruz Da Serra, Duque de Caxias, RJ"
+  },
+  "colleagues": [
+    {
+		"@context": "http://schema.org",
+		"@type": "Person",
+		"url":"https://www.facebook.com/eduardo.avay?ref=br_rs",
+		"name":"Eduardo Alves"
+    },
+	{
+		"@context": "http://schema.org",
+		"@type": "Person",
+		"url":"https://www.facebook.com/renatinho.tiinho",
+		"name":"Renato Santiango"
+	}
+  ],
+  "email": "contato@felipefm32.com.br",
+  "image": "http://felipefm32.com/img/avatar.png",
+  "jobTitle": "Analista de Sistemas",
+  "name": "Felipe Mateus",
+  "birthDate":"1996-02-13",
+  "birthPlace":"Rio de Janeiro,Brazil",
+  "gender":"Male",
+  "telephone": "+55(21)99226-3474",
+  "sameAs": [
+    "https://facebook.com/felipefm32",
+    "https://twitter.com/felipefm32",
+    "https://instagram.com/felipefm32",
+    "https://br.linkedin.com/in/felipefm32",
+	"https://github.com/felipefm32"
+  ],
+  "url": "https://felipefm32.com"
+}
+</script>
+	
   </head>
 
-  <body>
-    <%- body %>
+  <body id="page-top" >
+	<%- body %>
+	
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+	<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="/js/dependencies/sails.io.js"></script>
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+	<script src="https://www.google.com/recaptcha/api.js?" async defer></script>
 
-
-
-    <!--
-        Client-side Templates
-        ========================
-
-        HTML templates are important prerequisites of modern, rich client applications.
-        To work their magic, frameworks like Backbone, Angular, Ember, and Knockout require
-        that you load these templates client-side.
-
-        By default, your Gruntfile is configured to automatically load and precompile
-        client-side JST templates in your `assets/templates` folder, then
-        include them here automatically (between TEMPLATES and TEMPLATES END).
-
-        To customize this behavior to fit your needs, just edit `tasks/pipeline.js`.
-        For example, here are a few things you could do:
-
-            + Import templates from other directories
-            + Use a different template engine (handlebars, jade, dust, etc.)
-            + Internationalize your client-side templates using a server-side
-              stringfile before they're served.
-    -->
-
-    <!--TEMPLATES-->
-    
-    <!--TEMPLATES END-->
-
-
-    <!--
-
-      Client-side Javascript
-      ========================
-
-      You can always bring in JS files manually with `script` tags, or asynchronously
-      on the client using a solution like AMD (RequireJS).  Or, if you like, you can
-      take advantage of Sails' conventional asset pipeline (boilerplate Gruntfile).
-
-      By default, files in your `assets/js` folder are included here
-      automatically (between SCRIPTS and SCRIPTS END).  Both JavaScript (.js) and
-      CoffeeScript (.coffee) are supported. In production, your scripts will be minified
-      and concatenated into a single file.
-
-      To customize any part of the built-in behavior, just edit `tasks/pipeline.js`.
-      For example, here are a few things you could do:
-
-          + Change the order of your scripts
-          + Import scripts from other directories
-          + Use a different preprocessor, like TypeScript
-
-    -->
-
-    <!--SCRIPTS-->
-    <script src="/js/dependencies/sails.io.js"></script>
-    <!--SCRIPTS END-->
-  </body>
+	<script id="facebook-jssdk" async src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=390966160994721" ></script>
+	<div id="fb-root"></div>
+	
+	</body>
 </html>

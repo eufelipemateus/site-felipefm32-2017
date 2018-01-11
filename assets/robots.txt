@@ -1,8 +1,10 @@
-# The robots.txt file is used to control how search engines index your live URLs.
-# See http://sailsjs.org/documentation/anatomy/my-app/assets/robots-txt for more information.
+# Robots.txt Site Felipefm32
+User-agent: *
+Disallow: /img/
+#Disallow: /images/
+#Disallow: /js/
+#Disallow: /css/
+#Disallow: /fonts/
+Allow: /
 
-
-
-# To prevent search engines from seeing the site altogether, uncomment the next two lines:
-# User-Agent: *
-# Disallow: /
+Sitemap: https://felipefm32.com/sitemap.xml

@@ -1,0 +1,194 @@
+	<style>
+		body{
+			background-color: #293240;
+			color:#FFF;
+			background-image: url('images/map-image.png');
+			background-position: bottom;
+			background-repeat: no-repeat;
+		}
+		h1{
+			text-align:center;
+			font-size:32px;
+			margin:5% auto;
+		}
+		
+		.btn-back {
+			text-align:center;	
+			padding-top:2.5%;
+
+		}
+		.btn-back a{
+			font-weight:bolder;
+			margin: 0 auto;
+			color:#FFF;
+		}
+		
+		
+		#contatos a{
+			color:#FFF;
+		}
+		
+form .row{
+	margin:3% 0;
+}
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    color: black;
+    margin-left: 20px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border: 1px solid;
+    font-weight: bold;
+	overflow: hidden;
+}
+
+
+
+input:hover, textarea:hover, input:focus, textarea:focus {
+    /*border-color: #000066;
+    box-shadow: 5px 0px 9px #FFFF00;
+    background-color: #66FFFF;
+    color: black;*/
+    font-weight: bold;
+}
+
+.submit button {
+    background-color: #000;
+    height: 40px;
+    width: 100px;
+    font-weight: bold;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border: 1px solid;
+    color: white;
+    cursor:pointer;
+}
+
+textarea {
+    height: 120px;
+    line-height: 20px;
+	resize:none;
+}
+
+form label {
+    margin-left: 20px;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+footer{
+	text-align:center;
+	background-color:#000;
+	padding:2%;
+}
+
+@media screen and (max-width: 680px){
+	h1{
+		font-size:25px;
+	}
+	
+	.btn-back #text{
+		display:none;
+	}
+		
+}
+@media screen and (max-width: 320px){
+
+
+	h1{
+		font-size:18px;
+	}
+}
+
+	</style>
+
+<div class=" container-fluid">
+	<header>
+	<div class="row" >
+		<div class=" col-2 col-md-3  btn-back" ><a href="/" title="Ir Para Pagina Inicial"  > <i class="fa fa-arrow-left" aria-hidden="true"></i> <span id="text">Voltar</a>  </div>
+		<div class="col-8 col-md-6"><h1>Contate Me Agora</h1></div>
+		<div class="col-2 col-md-3"></div>
+
+	</div>
+	</header>
+	<section>
+		<div class="row" id="contatos">
+			<div class="col-xs-12 col-md-6 ">Email: <a href="mailto:contato@felipefm32.com.br" title="Meu endereço de email para contato."  rel="nofollow"><i class="fa fa-envelope"></i> contato@felipefm32.com.br</a></div>
+			<div class="col-2"></div>
+			<div class="col-xs-12 col-md-3 ">Telefone: <a href="tel:+5521992263474" title="Meu Telefone."  rel="nofollow"><i class="fa fa-phone"></i> +5521992263474 </a> </div>
+			
+		</div>		 
+		<form action="<%- sails.config.appUrl %>" method="POST">
+			
+			<% if(typeof success != "undefined"){
+					if(success){ %>
+				
+				<div class="alert alert-success">
+					<ul>
+						<li><%- message  %></li>
+					</ul>
+				</div>
+			<% }else{ %>
+			<div class="alert alert-danger">
+					<ul>
+						<li><%- message %></li>
+					</ul>
+				</div>
+				<% }
+			}  %>
+			<div class="row nome">
+				<div class="col-xs-3 col-md-2">
+					<label for="name">Nome</label>
+				</div>
+				<div class="col-xs-9 col-md-6 ">
+					<input type="text" id="name" placeholder="Smith Silva" title="Digite seu Nome"  value="" required="required" name="name" />
+				</div>
+				
+			</div>
+			<div class="row fone">
+				<div class="col-xs-3 col-md-2">
+					<label for="fone">Telefone</label>
+				</div>
+				<div class=" col-xs-9 col-md-6">
+					<input type="tel" id="fone" value="" placeholder="+55 (xx) xxxxx-xxxx" title="Digite Seu Telefone" name="fone" />
+				</div>
+				
+			</div>
+			<div class="row">
+				<div class="col-xs-3 col-md-2">
+					<label for="email">Email</label>
+				</div>
+				<div class="col-xs-9 col-md-6">
+					<input type="email" id="email" value="" placeholder="fulano@mail.com" required="required" tittle="Digite Seu Email" name="email" />
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-3 col-md-2">
+					<label for="message">Menssagem</label>
+				</div>
+				<div class="col-xs-9 col-md-6">
+					<textarea id="message" for="text" name="message" col="240" required="required" title="Deixe sua menssagem." placeholder="Escreva sua menssagem." ></textarea>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-xs-4 col-md-3"></div>
+				<div class="col-xs-8 col-md-6">
+				<%- captcha %>
+				</div>
+			</div>
+
+			<div class="row submit">
+				<div class="col-5"></div>
+				<div class="col-2">   	<button type="submit" >Enviar</button > </div>
+				<div class="col-5"></div>
+			</div>	
+		</form>
+	</section>
+</div>
+	<footer>
+		
+		<p><a href="/" title="Ir Para Pagina Inicial"><img src="images/logo_white.png" alt="Felipe Mateus"  width="150"></a>
+	</footer>
+

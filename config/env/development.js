@@ -20,5 +20,9 @@ module.exports = {
   // models: {
   //   connection: 'someMongodbServer'
   // }
-
+  
+  
+  /*RECAPTCHA_PRIVATE_KEY:'6LetRQ8UAAAAABCKNvPFto8lLp_WKkCJvZs0hJLy',
+  RECAPTCHA_PUBLIC_KEY:'6LetRQ8UAAAAAAlE0oh7jDpajEopw--CUes73NLa'
+*/
 };
