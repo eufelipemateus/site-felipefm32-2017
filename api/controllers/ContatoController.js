@@ -13,7 +13,7 @@ module.exports = {
 		Recaptcha = require('recaptcha-v2').Recaptcha;
 		var recaptcha = new Recaptcha(process.env.RECAPTCHA_PUBLIC_KEY, process.env.RECAPTCHA_PRIVATE_KEY);
 				
-		return res.view("contato",{captcha:recaptcha.toHTML()})
+		return res.view("contato",{title:"Contaddte Me",captcha:recaptcha.toHTML()})
 	},
 	
 	send: function(req, res) {
@@ -81,7 +81,7 @@ module.exports = {
 			Recaptcha = require('recaptcha-v2').Recaptcha;
 			var recaptcha = new Recaptcha(process.env.RECAPTCHA_PUBLIC_KEY, process.env.RECAPTCHA_PRIVATE_KEY);
 		
-		return res.view("contato",{success,message,data,captcha:recaptcha.toHTML()});
+		return res.view("contato",{title:"Contate Me",success,message,data,captcha:recaptcha.toHTML()});
 			
 		});
 		
