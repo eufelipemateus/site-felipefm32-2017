@@ -37,9 +37,9 @@ module.exports = {
 
 		recaptcha.verify(function(captcha_success, error_code) {
    
-			/*if(!captcha_success){
+			if(!captcha_success){
 				message = "Erro no Captcha!";
-			}else*/ if (!data.name.trim()) {
+			}else if (!data.name.trim()) {
 				message = "Nome esta vazio!";
 			}else if(!data.fone.trim()){
 				message = "Telefone esta vazio!";	  
