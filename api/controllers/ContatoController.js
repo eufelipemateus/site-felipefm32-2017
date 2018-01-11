@@ -56,8 +56,8 @@ module.exports = {
 				EmailService.sendEmail({
 						from: data.email,
 						to: "contato@felipefm32.com.br",
-						subject: `Messagem de "$(data.name)" `,
-						html: ` Name: $(data.name) \n  Telefone: $(data.fone) \n\n  Messagem: $(data.message)     ` ,
+						subject: `Messagem de "${data.name}" `,
+						html: ` Name: ${data.name} \n  Telefone: ${data.fone} \n\n  Messagem: ${data.message}    ` ,
 					  }, function(err, reply) {
 						console.log(err && err.stack);
 						console.dir(reply);
