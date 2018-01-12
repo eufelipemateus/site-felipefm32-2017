@@ -69,7 +69,7 @@ module.exports = {
 						from: "noreply@fm32.com.br" ,
 						to: data.email ,
 						subject: "Resposta Automatica",
-						text: `Sua menssagem foi enviada aguarde pois em breve estarei respondendo.\n\n Atenciosamente, Felipe Mateus` ,
+						text: `Sua menssagem foi enviada aguarde pois em breve estarei respondendo.\n\n Atenciosamente,\n Felipe Mateus` ,
 					  }, function(err, reply) {
 						console.log(err && err.stack);
 						console.dir(reply);
